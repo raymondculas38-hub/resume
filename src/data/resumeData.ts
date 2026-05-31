@@ -4,7 +4,7 @@ export const personalInfo: PersonalInfo = {
   fullName: "Raymond A. Culas",
   title: "Information Technology Student & Aspiring Full-Stack Developer",
 
-  avatar: "/src/assets/profile.jpg",
+  avatar: "/assets/profile.jpg",
 
   bio: "Information Technology student with a strong passion for web and mobile application development. Experienced in building academic projects, capstone systems, and personal applications using modern technologies such as TypeScript, React, Next.js, PHP,Dart,Python, MySQL,PosgreSQL,Firebase and Node.js. Continuously learning software engineering best practices, UI/UX design, and cloud technologies while developing real-world solutions.",
 
@@ -139,7 +139,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Completed",
     date: "Jan 2020",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_beg_2",
@@ -152,7 +152,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Completed",
     date: "Mar 2020",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_beg_3",
@@ -165,7 +165,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Completed",
     date: "Jun 2020",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_beg_4",
@@ -178,7 +178,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Completed",
     date: "Oct 2020",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_beg_5",
@@ -191,7 +191,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Completed",
     date: "Nov 2020",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_beg_6",
@@ -204,7 +204,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Completed",
     date: "Dec 2020",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
 
   // Intermediate Projects
@@ -219,7 +219,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Completed",
     date: "Jun 2022",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_int_2",
@@ -232,7 +232,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Maintained",
     date: "Nov 2022",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_int_3",
@@ -245,7 +245,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Completed",
     date: "Jan 2023",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_int_4",
@@ -258,7 +258,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Completed",
     date: "May 2023",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_int_5",
@@ -271,7 +271,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "In Progress",
     date: "Aug 2023",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
 
   // Advanced Projects
@@ -286,7 +286,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Completed",
     date: "Dec 2023",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_adv_2",
@@ -299,7 +299,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Maintained",
     date: "Mar 2024",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_adv_3",
@@ -312,7 +312,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Beta",
     date: "Sep 2024",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   },
   {
     id: "p_adv_4",
@@ -325,7 +325,7 @@ export const projectsData: ProjectItem[] = [
     demo: "#",
     status: "Completed",
     date: "Dec 2024",
-    image: "/src/assets/project_demo.png"
+    image: "/assets/project_demo.png"
   }
 ];
 
@@ -350,21 +350,21 @@ export const certificationsData: CertificationItem[] = [
     title: "SQL Server Foundations Course",
     organization: "ScholarHat",
     date: "Sep 2025",
-    image: "/src/assets/sql_server_cert.png"
+    image: "/assets/sql_server_cert.png"
   },
   {
     id: "cert2",
     title: "Introduction to Cybersecurity",
     organization: "Cisco Networking Academy",
     date: "Sep 2025",
-    image: "/src/assets/cybersecurity_cert.png"
+    image: "/assets/cybersecurity_cert.png"
   },
   {
     id: "cert3",
     title: "Introduction to Modern AI",
     organization: "Cisco Networking Academy",
     date: "Apr 2026",
-    image: "/src/assets/modern_ai_cert.png"
+    image: "/assets/modern_ai_cert.png"
   }
 ];
 

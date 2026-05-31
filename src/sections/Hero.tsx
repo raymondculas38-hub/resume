@@ -26,8 +26,6 @@ export default function Hero({ theme }: HeroProps) {
     const video = videoRef.current;
     if (!video) return;
 
-    let animationFrameId: number;
-
     if (theme === 'light') {
       setVideoVisible(true);
       if (video.currentTime < 0.1 || video.ended) {
@@ -182,7 +180,7 @@ export default function Hero({ theme }: HeroProps) {
                 {/* The Video (White Mode / Living state) */}
                 <video
                   ref={videoRef}
-                  src="/src/assets/kling_20260531_作品_Cinematic__2389_0.mp4"
+                  src="/assets/kling_20260531_作品_Cinematic__2389_0.mp4"
                   className="w-full h-full object-cover absolute inset-0 transition-opacity duration-[1000ms] ease-in-out z-20"
                   style={{
                     opacity: videoVisible ? 1 : 0,
