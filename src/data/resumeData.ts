@@ -12,7 +12,7 @@ export const personalInfo: PersonalInfo = {
 
   summary: "Dedicated Information Technology student with hands-on experience developing web-based systems, academic projects, and freelance applications. Skilled in frontend and backend development, database management, and responsive user interface design. Passionate about creating practical solutions that improve user experience while continuously expanding technical knowledge and industry-relevant skills.",
 
-  experienceYears: 0,
+  experienceYears: 6,
   email: "raymondculas38@gmail.com",
   phone: "+639167711759",
   location: "Saguise Getafe, Bohol",
@@ -21,38 +21,32 @@ export const personalInfo: PersonalInfo = {
 
 export const skillsData: Skill[] = [
   // Frontend
-  { name: "TypeScript", level: 95, category: "Frontend Development" },
-  { name: "JavaScript", level: 95, category: "Frontend Development" },
-  { name: "React", level: 95, category: "Frontend Development" },
-  { name: "Next.js", level: 90, category: "Frontend Development" },
-  { name: "Tailwind CSS", level: 95, category: "Frontend Development" },
+  { name: "TypeScript", level: 80, category: "Frontend Development" },
+  { name: "JavaScript", level: 78, category: "Frontend Development" },
+  { name: "React", level: 75, category: "Frontend Development" },
+  { name: "Tailwind CSS", level: 77, category: "Frontend Development" },
 
   // Backend
-  { name: "Node.js", level: 90, category: "Backend Development" },
-  { name: "Express.js", level: 88, category: "Backend Development" },
-  { name: "NestJS", level: 82, category: "Backend Development" },
-  { name: "Python", level: 78, category: "Backend Development" },
-  { name: "PHP", level: 75, category: "Backend Development" },
+  { name: "Express.js", level: 68, category: "Backend Development" },
+  { name: "NestJS", level: 55, category: "Backend Development" },
+  { name: "Python", level: 65, category: "Backend Development" },
+  { name: "PHP", level: 70, category: "Backend Development" },
 
   // Mobile
-  { name: "React Native", level: 85, category: "Mobile Development" },
-  { name: "Flutter", level: 72, category: "Mobile Development" },
+  { name: "Flutter", level: 58, category: "Mobile Development" },
 
   // Database
-  { name: "PostgreSQL", level: 88, category: "Database Management" },
-  { name: "MySQL", level: 85, category: "Database Management" },
-  { name: "MongoDB", level: 82, category: "Database Management" },
-  { name: "Firebase", level: 80, category: "Database Management" },
+  { name: "PostgreSQL", level: 72, category: "Database Management" },
+  { name: "MySQL", level: 75, category: "Database Management" },
+  { name: "MongoDB", level: 60, category: "Database Management" },
+  { name: "Firebase", level: 68, category: "Database Management" },
 
-  // Cloud & DevOps
-  { name: "AWS (S3/EC2/Lambda)", level: 85, category: "Cloud Technologies" },
-  { name: "Azure Services", level: 70, category: "Cloud Technologies" },
-  { name: "Docker", level: 80, category: "DevOps" },
-  { name: "GitHub Actions CI/CD", level: 82, category: "DevOps" },
+  // DevOps
+  { name: "Docker", level: 58, category: "DevOps" },
 
   // UI/UX & VCS
-  { name: "Figma UI Design", level: 78, category: "UI/UX Design" },
-  { name: "Git & GitHub", level: 95, category: "Version Control" }
+  { name: "Figma UI Design", level: 65, category: "UI/UX Design" },
+  { name: "Git & GitHub", level: 80, category: "Version Control" }
 ];
 
 export const experienceData: ExperienceItem[] = [
@@ -88,7 +82,21 @@ export const experienceData: ExperienceItem[] = [
       "JavaScript",
       "Bootstrap",
       "XAMPP",
-      "ngrok"
+      "InfinityFree"
+    ],
+    demoLinks: [
+      {
+        role: "Student",
+        email: "student1@gmail.com",
+        password: "password",
+        loginUrl: "https://bccojtattendance.infy.click/user_login.php"
+      },
+      {
+        role: "Admin",
+        email: "admin@gmail.com",
+        password: "password",
+        loginUrl: "https://bccojtattendance.infy.click/admin_login.php"
+      }
     ]
   },
 
@@ -106,7 +114,8 @@ export const experienceData: ExperienceItem[] = [
       "Flutter",
       "Dart",
       "Firebase"
-    ]
+    ],
+    video: "/assets/mobileapp.mp4"
   },
 
   {
@@ -121,7 +130,12 @@ export const experienceData: ExperienceItem[] = [
     type: "Academic",
     technologies: [
       "Python",
-      "Machine Learning"
+      "Machine Learning",
+      "Jupyter Notebook"
+    ],
+    images: [
+      "/@fs/C:/Users/Admin/.gemini/antigravity/brain/54120d99-d390-4bb8-b200-f4c65fa630c5/media__1784607136163.jpg",
+      "/@fs/C:/Users/Admin/.gemini/antigravity/brain/54120d99-d390-4bb8-b200-f4c65fa630c5/media__1784607138626.jpg"
     ]
   }
 ];
@@ -255,10 +269,24 @@ export const projectsData: ProjectItem[] = [
     type: "Capstone",
     technologies: ["React", "PHP", "MySQL", "Webcam API", "Tailwind CSS"],
     github: "https://github.com/dev/ojt-attendance",
-    demo: "#",
+    demo: "https://bccojtattendance.infy.click/user_login.php",
     status: "Completed",
     date: "May 2023",
-    image: "/assets/project_demo.png"
+    image: "/assets/project_demo.png",
+    credentials: [
+      {
+        role: "Student",
+        email: "student1@gmail.com",
+        password: "password",
+        loginUrl: "https://bccojtattendance.infy.click/user_login.php"
+      },
+      {
+        role: "Admin",
+        email: "admin@gmail.com",
+        password: "password",
+        loginUrl: "https://bccojtattendance.infy.click/admin_login.php"
+      }
+    ]
   },
   {
     id: "p_int_5",
@@ -336,7 +364,7 @@ export const educationData: EducationItem[] = [
   degree: "Bachelor of Science in Information Technology",
   year: "2026 - Present",
   achievements: [
-    "Currently a 3rd Year BSIT student and incoming 4th Year student.",
+    "Currently a 4th Year BSIT student.",
     "Developed freelance and personal web application projects for clients and individual learning purposes.",
     "Developed practical skills in programming, database management, and system analysis through coursework and personal projects.",
     "Demonstrates strong teamwork, adaptability, and a commitment to continuous learning."
@@ -418,13 +446,12 @@ export const techStackGrid: TechStackItem[] = [
   { name: "VS Code", category: "Tools", iconName: "SiVisualstudiocode" },
   { name: "Java", category: "Languages", iconName: "FaJava" },
   { name: "Python", category: "Languages", iconName: "SiPython" },
+  { name: "Jupyter", category: "Tools", iconName: "SiJupyter" },
   { name: "PHP", category: "Languages", iconName: "SiPhp" },
   { name: "TypeScript", category: "Languages", iconName: "SiTypescript" },
   { name: "JavaScript", category: "Languages", iconName: "SiJavascript" },
   { name: "HTML", category: "Frontend", iconName: "SiHtml5" },
   { name: "Tailwind CSS", category: "Frontend Frameworks", iconName: "SiTailwindcss" },
-  { name: "Next.js", category: "Frontend Frameworks", iconName: "SiNextdotjs" },
-  { name: "Node.js", category: "Backend", iconName: "SiNodedotjs" },
   { name: "Dart", category: "Languages", iconName: "SiDart" },
   { name: "Flutter", category: "Mobile Frameworks", iconName: "SiFlutter" },
   { name: "MySQL", category: "Databases", iconName: "SiMysql" },
@@ -432,6 +459,5 @@ export const techStackGrid: TechStackItem[] = [
   { name: "Firebase", category: "Databases", iconName: "SiFirebase" },
   { name: "GitHub", category: "Version Control", iconName: "SiGithub" },
   { name: "Git", category: "Version Control", iconName: "SiGit" },
-  { name: "AWS", category: "Cloud", iconName: "FaAws" },
   { name: "Figma", category: "UI/UX Design", iconName: "SiFigma" }
 ];

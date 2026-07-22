@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiBriefcase, FiCalendar } from 'react-icons/fi';
+import { FiBriefcase, FiCalendar, FiExternalLink, FiUser, FiLock } from 'react-icons/fi';
 import SectionTitle from '../components/SectionTitle';
 import GlassCard from '../components/GlassCard';
 import { experienceData } from '../data/resumeData';
@@ -84,6 +84,65 @@ export default function Experience() {
                     </span>
                   ))}
                 </div>
+
+                {/* Demo Links with Credentials */}
+                {exp.demoLinks && exp.demoLinks.length > 0 && (
+                  <div className="mt-5 p-4 rounded-xl bg-violet-500/5 dark:bg-violet-500/10 border border-violet-500/20">
+                    <p className="text-sm font-bold text-violet-400 mb-3 flex items-center gap-2">
+                      <FiLock size={13} /> Live Demo Access
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {exp.demoLinks.map(link => (
+                        <a
+                          key={link.role}
+                          href={link.loginUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block p-3 rounded-lg bg-white/60 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-violet-500/50 hover:shadow-md hover:shadow-violet-500/10 transition-all duration-200 group"
+                        >
+                          <div className="flex items-center gap-2 mb-2">
+                            <FiUser size={12} className="text-violet-400" />
+                            <span className="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-violet-400 transition-colors">
+                              {link.role} Portal
+                            </span>
+                            <FiExternalLink size={11} className="ml-auto text-slate-400 group-hover:text-violet-400 transition-colors" />
+                          </div>
+                          <div className="text-xs text-slate-500 dark:text-slate-400 font-mono space-y-0.5">
+                            <p>📧 {link.email}</p>
+                            <p>🔑 {link.password}</p>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Showcase Images */}
+                {exp.images && exp.images.length > 0 && (
+                  <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {exp.images.map((imgUrl, idx) => (
+                      <div key={idx} className="overflow-hidden rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-slate-900/60 p-2 flex items-center justify-center">
+                        <img
+                          src={imgUrl}
+                          alt={`${exp.position} screenshot ${idx + 1}`}
+                          className="w-full h-auto max-h-[420px] object-contain rounded-lg hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Showcase Video */}
+                {exp.video && (
+                  <div className="mt-5 overflow-hidden rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-slate-900/60 p-2 flex items-center justify-center">
+                    <video
+                      src={exp.video}
+                      controls
+                      playsInline
+                      className="w-full h-auto max-h-[480px] rounded-lg shadow-md"
+                    />
+                  </div>
+                )}
               </GlassCard>
             </motion.div>
           ))}

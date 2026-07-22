@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiSearch, FiX, FiCalendar } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiSearch, FiX, FiCalendar, FiUser, FiLock } from 'react-icons/fi';
 import SectionTitle from '../components/SectionTitle';
 import { projectsData } from '../data/resumeData';
 import { ProjectFilterType, ProjectDifficulty } from '../types';
@@ -153,6 +153,37 @@ export default function Projects() {
                       </span>
                     )}
                   </div>
+
+                  {/* Demo Credentials */}
+                  {project.credentials && project.credentials.length > 0 && (
+                    <div className="mb-4 p-3 rounded-xl bg-violet-500/5 dark:bg-violet-500/10 border border-violet-500/20">
+                      <p className="text-xs font-bold text-violet-400 mb-2 flex items-center gap-1.5">
+                        <FiLock size={11} /> Demo Credentials
+                      </p>
+                      <div className="space-y-2">
+                        {project.credentials.map(cred => (
+                          <a
+                            key={cred.role}
+                            href={cred.loginUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block p-2 rounded-lg bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-violet-500/40 transition-colors group"
+                          >
+                            <div className="flex items-center gap-1.5 mb-1">
+                              <FiUser size={10} className="text-violet-400" />
+                              <span className="text-xs font-bold text-slate-700 dark:text-slate-200 group-hover:text-violet-400 transition-colors">
+                                {cred.role} Login
+                              </span>
+                              <FiExternalLink size={9} className="ml-auto text-slate-400 group-hover:text-violet-400 transition-colors" />
+                            </div>
+                            <div className="text-[10px] text-slate-500 dark:text-slate-400 font-mono leading-relaxed">
+                              <span>{cred.email}</span> / <span>{cred.password}</span>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* Links */}
                   <div className="flex items-center gap-2 pt-3 border-t border-slate-200 dark:border-white/10">

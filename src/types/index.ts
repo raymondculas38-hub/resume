@@ -38,10 +38,21 @@ export interface ExperienceItem {
   description: string[];
   type: ExperienceType;
   technologies: string[];
+  demoLinks?: ProjectCredential[];
+  image?: string;
+  images?: string[];
+  video?: string;
 }
 
 export type ProjectDifficulty = 'Beginner' | 'Intermediate' | 'Advanced';
 export type ProjectFilterType = 'Web Development' | 'Mobile Development' | 'Capstone' | 'Freelance' | 'Personal Projects';
+
+export interface ProjectCredential {
+  role: string;
+  email: string;
+  password: string;
+  loginUrl: string;
+}
 
 export interface ProjectItem {
   id: string;
@@ -55,6 +66,7 @@ export interface ProjectItem {
   status: 'Completed' | 'In Progress' | 'Maintained' | 'Beta';
   date: string;
   image: string;
+  credentials?: ProjectCredential[];
 }
 
 export interface EducationItem {

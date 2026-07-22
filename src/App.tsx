@@ -4,7 +4,6 @@ import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 import Hero from './sections/Hero';
 import About from './sections/About';
-import Skills from './sections/Skills';
 import TechStack from './sections/TechStack';
 import Experience from './sections/Experience';
 import Education from './sections/Education';
@@ -19,7 +18,6 @@ export default function App() {
       <main>
         <Hero theme={theme} />
         <About />
-        <Skills />
         <TechStack />
         <Experience />
         <Education />

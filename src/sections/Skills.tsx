@@ -10,7 +10,6 @@ const categories: SkillCategoryType[] = [
   'Backend Development',
   'Mobile Development',
   'Database Management',
-  'Cloud Technologies',
   'UI/UX Design',
   'DevOps',
   'Version Control',

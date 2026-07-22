@@ -6,6 +6,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    open: true
+    open: true,
+    fs: {
+      strict: false,
+      allow: ['..', 'C:/Users/Admin/.gemini/antigravity', 'C:/Users/Admin/Documents/resume']
+    }
   }
 })

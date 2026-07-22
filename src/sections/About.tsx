@@ -1,43 +1,11 @@
 import { motion } from 'framer-motion';
-import { FiBriefcase, FiCode, FiUsers, FiStar } from 'react-icons/fi';
 import SectionTitle from '../components/SectionTitle';
 import GlassCard from '../components/GlassCard';
-import { personalInfo, projectsData, skillsData } from '../data/resumeData';
-import { useCountUp } from '../hooks/useCountUp';
+import { personalInfo } from '../data/resumeData';
 
-const stats = [
-  { label: 'Total Projects', value: 0, icon: FiCode, color: 'from-violet-600 to-purple-600', suffix: '+' },
-  { label: 'Years Experience', value: 0, icon: FiBriefcase, color: 'from-cyan-500 to-blue-500', suffix: '+' },
-  { label: 'Freelance Clients', value: 12, icon: FiUsers, color: 'from-pink-500 to-rose-500', suffix: '+' },
-  { label: 'Technologies', value: 0, icon: FiStar, color: 'from-amber-500 to-orange-500', suffix: '+' },
-];
-
-function StatCard({ label, value, Icon, color, suffix }: { label: string; value: number; Icon: React.FC<{size?: number}>; color: string; suffix?: string }) {
-  const { count, ref } = useCountUp(value);
-  return (
-    <GlassCard className="p-6 text-center">
-      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center mx-auto mb-3 shadow-lg`}>
-        <Icon size={22} />
-      </div>
-      {/* @ts-expect-error ref typing */}
-      <p ref={ref} className="text-3xl font-extrabold text-slate-900 dark:text-white mb-1">
-        {count}{suffix}
-      </p>
-      <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{label}</p>
-    </GlassCard>
-  );
-}
-
-const techHighlights = ['TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'Docker', 'AWS', 'React Native'];
+const techHighlights = ['TypeScript', 'JavaScript', 'React', 'Python', 'PHP', 'PostgreSQL', 'MySQL', 'Docker', 'Flutter'];
 
 export default function About() {
-  const dynamicStats = [
-    { ...stats[0], value: projectsData.length },
-    { ...stats[1], value: personalInfo.experienceYears },
-    { ...stats[2], value: 12 },
-    { ...stats[3], value: skillsData.length },
-  ];
-
   return (
     <section id="about" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,13 +14,6 @@ export default function About() {
           title="About Me"
           subtitle="Passionate about building digital solutions that make a difference."
         />
-
-        {/* Stats row */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-          {dynamicStats.map((s) => (
-            <StatCard key={s.label} label={s.label} value={s.value} Icon={s.icon} color={s.color} suffix={s.suffix} />
-          ))}
-        </div>
 
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           {/* Left: Bio + objective */}
