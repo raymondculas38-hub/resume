@@ -134,8 +134,8 @@ export const experienceData: ExperienceItem[] = [
       "Jupyter Notebook"
     ],
     images: [
-      "/@fs/C:/Users/Admin/.gemini/antigravity/brain/54120d99-d390-4bb8-b200-f4c65fa630c5/media__1784607136163.jpg",
-      "/@fs/C:/Users/Admin/.gemini/antigravity/brain/54120d99-d390-4bb8-b200-f4c65fa630c5/media__1784607138626.jpg"
+      "/assets/ml1.jpg",
+      "/assets/ml2.jpg"
     ]
   }
 ];

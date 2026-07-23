@@ -191,23 +191,6 @@ export default function Hero({ theme }: HeroProps) {
                 />
               </div>
             </div>
-            {/* Floating badge */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-3 -right-3 glass dark:bg-slate-800/90 bg-white/90 rounded-2xl px-3 py-2 shadow-xl border border-white/20"
-            >
-              <p className="text-xs font-semibold text-slate-700 dark:text-slate-200">
-                🏆 {personalInfo.experienceYears}+ Years Exp.
-              </p>
-            </motion.div>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-3 -left-3 glass dark:bg-slate-800/90 bg-white/90 rounded-2xl px-3 py-2 shadow-xl border border-white/20"
-            >
-              <p className="text-xs font-semibold text-slate-700 dark:text-slate-200">⚡ Full-Stack Dev</p>
-            </motion.div>
           </motion.div>
         </div>
 
