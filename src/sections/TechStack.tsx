@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 import {
   SiPython, SiPhp, SiTypescript, SiJavascript,
   SiHtml5, SiTailwindcss, SiDart, SiFlutter,
@@ -133,6 +132,7 @@ export default function TechStack() {
       }, 50);
       return () => clearTimeout(timer);
     }
+    return () => {};
   }, [transitionEnabled]);
 
   // Touch handlers for mobile swipe gestures

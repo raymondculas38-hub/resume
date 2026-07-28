@@ -56,12 +56,11 @@ export const experienceData: ExperienceItem[] = [
     company: "Personal Journey",
     duration: "2023",
     description: [
-      "WRITE THE FIRST LINE OF CODE \"HELLO WORD\""
+      'WRITE THE FIRST LINE OF CODE System.out.print("HELLO BOLD");'
     ],
     type: "Personal",
     technologies: [
-      "HTML",
-      "JavaScript"
+      "Java"
     ]
   },
 

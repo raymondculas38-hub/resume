@@ -4,7 +4,6 @@ import {
 } from 'react-icons/fi';
 import { SiGitlab } from 'react-icons/si';
 import SectionTitle from '../components/SectionTitle';
-import GlassCard from '../components/GlassCard';
 import { socialLinks } from '../data/resumeData';
 import { SocialPlatform } from '../types';
 

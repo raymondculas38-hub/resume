@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 const navLinks = [
   { label: 'About', href: '#about' },
+  { label: 'Tech Stack', href: '#techstack' },
   { label: 'Projects', href: '#projects' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#socials' },
@@ -39,6 +40,17 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
     return () => observer.disconnect();
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    setActive(href);
+    const targetElement = document.querySelector(href);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      window.history.pushState(null, '', href);
+    }
+  };
+
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -52,7 +64,11 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-2 group">
+        <a
+          href="#hero"
+          onClick={(e) => handleNavClick(e, '#hero')}
+          className="flex items-center gap-2 group"
+        >
           <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-500 flex items-center justify-center text-white font-bold text-sm shadow-lg group-hover:scale-110 transition-transform">RC</span>
           <span className="font-bold text-slate-900 dark:text-white text-sm hidden sm:block">Raymond<span className="text-gradient">.dev</span></span>
         </a>
@@ -63,6 +79,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             <li key={link.href}>
               <a
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                   active === link.href
                     ? 'bg-violet-600/20 text-violet-400 dark:text-violet-300'
@@ -130,7 +147,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
               <a
                 key={link.href}
                 href={link.href}
-                onClick={() => setMobileOpen(false)}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="block py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-violet-600/10 hover:text-violet-500 transition-colors"
               >
                 {link.label}

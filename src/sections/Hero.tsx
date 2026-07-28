@@ -38,6 +38,7 @@ export default function Hero({ theme }: HeroProps) {
           console.error("Playback failed", error);
         });
       }
+      return () => {};
     } else {
       // Reverse playback using the 'seeked' event to avoid browser rendering freezes
       video.pause();

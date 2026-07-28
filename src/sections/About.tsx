@@ -3,8 +3,6 @@ import SectionTitle from '../components/SectionTitle';
 import GlassCard from '../components/GlassCard';
 import { personalInfo } from '../data/resumeData';
 
-const techHighlights = ['TypeScript', 'JavaScript', 'React', 'Python', 'PHP', 'PostgreSQL', 'MySQL', 'Docker', 'Flutter'];
-
 export default function About() {
   return (
     <section id="about" className="py-24 relative">
@@ -38,7 +36,7 @@ export default function About() {
             </GlassCard>
           </motion.div>
 
-          {/* Right: Tech highlights + contact info */}
+          {/* Right: Quick details */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -47,27 +45,13 @@ export default function About() {
             className="space-y-6"
           >
             <GlassCard className="p-8">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-5">Core Technologies</h3>
-              <div className="flex flex-wrap gap-2">
-                {techHighlights.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1.5 rounded-lg text-sm font-semibold bg-violet-600/10 text-violet-600 dark:text-violet-300 border border-violet-500/20 hover:bg-violet-600/20 transition-colors cursor-default"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </GlassCard>
-
-            <GlassCard className="p-8">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-5">Quick Details</h3>
               <dl className="space-y-3">
                 {[
                   { label: 'Email', value: personalInfo.email },
                   { label: 'Phone', value: personalInfo.phone },
                   { label: 'Location', value: personalInfo.location },
-                  { label: 'Experience', value: `${personalInfo.experienceYears}+ Years` },
+                  { label: 'Experience', value: 'INFORMATION TECHNOLOGY STUDENT' },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex gap-4">
                     <dt className="text-sm font-semibold text-slate-500 dark:text-slate-400 w-24 flex-shrink-0">{label}</dt>
