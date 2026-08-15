@@ -3,11 +3,11 @@ import { FiSun, FiMoon, FiDownload, FiMenu, FiX } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 
 const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Tech Stack', href: '#techstack' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Education', href: '#education' },
-  { label: 'Contact', href: '#socials' },
+  { label: 'ABOUT', href: '#about' },
+  { label: 'TECH STACK', href: '#techstack' },
+  { label: 'PROJECT', href: '#projects' },
+  { label: 'EDUCATION', href: '#education' },
+  { label: 'CONTACT', href: '#socials' },
 ];
 
 interface NavbarProps {
@@ -58,7 +58,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'glass dark:bg-slate-900/80 bg-white/80 shadow-lg shadow-black/10'
+          ? 'glass bg-[#005f5b]/90 dark:bg-black/90 shadow-lg shadow-black/20 border-b border-white/10'
           : 'bg-transparent'
       }`}
     >
@@ -69,21 +69,19 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           onClick={(e) => handleNavClick(e, '#hero')}
           className="flex items-center gap-2 group"
         >
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-cyan-500 flex items-center justify-center text-white font-bold text-sm shadow-lg group-hover:scale-110 transition-transform">RC</span>
-          <span className="font-bold text-slate-900 dark:text-white text-sm hidden sm:block">Raymond<span className="text-gradient">.dev</span></span>
+          <span className="w-8 h-8 rounded-lg bg-black dark:bg-green-600 flex items-center justify-center text-white font-bold text-sm shadow-lg group-hover:scale-110 transition-transform">RC</span>
+          <span className="font-bold text-white text-sm hidden sm:block">Raymond.dev</span>
         </a>
 
         {/* Desktop Nav */}
-        <ul className="hidden lg:flex items-center gap-1">
+        <ul className="hidden lg:flex items-center gap-2">
           {navLinks.map(link => (
             <li key={link.href}>
               <a
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  active === link.href
-                    ? 'bg-violet-600/20 text-violet-400 dark:text-violet-300'
-                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-extrabold tracking-wider transition-all duration-200 bg-black text-white hover:bg-zinc-800 dark:bg-green-600 dark:text-white dark:hover:bg-green-500 shadow-sm ${
+                  active === link.href ? 'ring-2 ring-white dark:ring-green-300 scale-105' : ''
                 }`}
               >
                 {link.label}
@@ -97,7 +95,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           <button
             id="theme-toggle"
             onClick={toggleTheme}
-            className="theme-toggle p-2 rounded-lg glass dark:bg-white/5 bg-slate-100 text-slate-700 dark:text-slate-300 hover:text-violet-500 dark:hover:text-violet-400 transition-all duration-200 hover:scale-110"
+            className="theme-toggle p-2 rounded-lg bg-black text-white dark:bg-green-600 dark:text-white hover:opacity-80 transition-all duration-200 hover:scale-110 shadow-sm"
             aria-label="Toggle theme"
           >
             <AnimatePresence mode="wait">
@@ -114,10 +112,12 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           </button>
 
           <a
-            href="#"
-            onClick={e => { e.preventDefault(); window.print(); }}
+            href="/assets/Raymond-resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Raymond-resume.pdf"
             id="download-resume-nav"
-            className="no-print hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-violet-600 hover:bg-violet-500 text-white text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-violet-500/30"
+            className="no-print hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-black text-white dark:bg-green-600 dark:text-white text-xs font-bold transition-all duration-200 hover:scale-105 shadow-md"
           >
             <FiDownload size={14} />
             Resume
@@ -127,7 +127,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           <button
             id="mobile-menu-toggle"
             onClick={() => setMobileOpen(o => !o)}
-            className="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+            className="lg:hidden p-2 rounded-lg text-white bg-black dark:bg-green-600 transition-colors"
           >
             {mobileOpen ? <FiX size={20} /> : <FiMenu size={20} />}
           </button>
@@ -141,14 +141,14 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass dark:bg-slate-900/95 bg-white/95 border-t border-white/10 px-4 pb-4"
+            className="lg:hidden glass bg-[#005f5b] dark:bg-black border-t border-white/10 px-4 pb-4 pt-2 space-y-2"
           >
             {navLinks.map(link => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="block py-2.5 px-3 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-violet-600/10 hover:text-violet-500 transition-colors"
+                className="block py-2 px-3 rounded-lg text-xs font-extrabold tracking-wider bg-black text-white dark:bg-green-600 dark:text-white transition-colors"
               >
                 {link.label}
               </a>

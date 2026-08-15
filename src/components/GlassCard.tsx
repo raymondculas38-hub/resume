@@ -14,7 +14,7 @@ export default function GlassCard({ children, className = '', hover = false, onC
       whileHover={hover ? { y: -4, scale: 1.01 } : undefined}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       onClick={onClick}
-      className={`glass dark:bg-white/5 bg-white/70 rounded-2xl shadow-xl ${hover ? 'cursor-pointer hover:shadow-violet-500/10 hover:border-violet-500/30 transition-all duration-300' : ''} ${className}`}
+      className={`glass bg-white/10 dark:bg-zinc-900/90 border border-white/20 dark:border-zinc-800 rounded-2xl shadow-xl ${hover ? 'cursor-pointer hover:border-white/50 dark:hover:border-green-500/50 transition-all duration-300' : ''} ${className}`}
     >
       {children}
     </motion.div>

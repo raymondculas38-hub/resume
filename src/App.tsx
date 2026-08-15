@@ -13,7 +13,7 @@ export default function App() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="noise-bg relative min-h-screen">
+    <div className="relative min-h-screen bg-[#007A75] dark:bg-black text-white">
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero theme={theme} />

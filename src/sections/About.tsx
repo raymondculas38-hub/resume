@@ -8,7 +8,7 @@ export default function About() {
     <section id="about" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          label="Who I Am"
+          label="ABOUT"
           title="About Me"
           subtitle="Passionate about building digital solutions that make a difference."
         />
@@ -22,17 +22,17 @@ export default function About() {
             transition={{ duration: 0.7 }}
           >
             <GlassCard className="p-8">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-md bg-gradient-to-br from-violet-600 to-cyan-500 inline-block" />
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <span className="w-6 h-6 rounded-md bg-black dark:bg-green-600 inline-block" />
                 Professional Summary
               </h3>
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">{personalInfo.summary}</p>
+              <p className="text-slate-100 dark:text-slate-300 leading-relaxed mb-6">{personalInfo.summary}</p>
 
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-md bg-gradient-to-br from-pink-500 to-violet-600 inline-block" />
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <span className="w-6 h-6 rounded-md bg-black dark:bg-green-600 inline-block" />
                 Career Objective
               </h3>
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{personalInfo.objective}</p>
+              <p className="text-slate-100 dark:text-slate-300 leading-relaxed">{personalInfo.objective}</p>
             </GlassCard>
           </motion.div>
 
@@ -45,7 +45,7 @@ export default function About() {
             className="space-y-6"
           >
             <GlassCard className="p-8">
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-5">Quick Details</h3>
+              <h3 className="text-xl font-bold text-white mb-5">Quick Details</h3>
               <dl className="space-y-3">
                 {[
                   { label: 'Email', value: personalInfo.email },
@@ -54,8 +54,8 @@ export default function About() {
                   { label: 'Experience', value: 'INFORMATION TECHNOLOGY STUDENT' },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex gap-4">
-                    <dt className="text-sm font-semibold text-slate-500 dark:text-slate-400 w-24 flex-shrink-0">{label}</dt>
-                    <dd className="text-sm text-slate-700 dark:text-slate-200 font-medium">{value}</dd>
+                    <dt className="text-sm font-semibold text-slate-200 dark:text-slate-400 w-24 flex-shrink-0">{label}</dt>
+                    <dd className="text-sm text-white dark:text-slate-100 font-medium">{value}</dd>
                   </div>
                 ))}
               </dl>

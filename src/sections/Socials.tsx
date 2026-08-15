@@ -24,7 +24,7 @@ export default function Socials() {
     <section id="socials" className="py-24 relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          label="Let's Connect"
+          label="CONTACT"
           title="Social & Professional Links"
           subtitle="Find me across the web. I'm always happy to connect."
         />
@@ -43,12 +43,12 @@ export default function Socials() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
                 whileHover={{ y: -4, scale: 1.04 }}
-                className={`group glass dark:bg-white/5 bg-white border border-slate-200 dark:border-white/10 rounded-2xl p-5 flex flex-col items-center gap-3 hover:border-violet-500/40 hover:shadow-xl hover:shadow-violet-500/10 transition-all duration-300 ${config.bg}`}
+                className="group glass dark:bg-white/5 bg-white/10 border border-white/20 rounded-2xl p-5 flex flex-col items-center gap-3 hover:border-white/50 transition-all duration-300"
               >
-                <span className={`text-slate-600 dark:text-slate-400 transition-colors duration-200 ${config.color}`}>
+                <span className="text-white transition-colors duration-200">
                   {config.icon}
                 </span>
-                <span className="text-xs font-semibold text-slate-700 dark:text-slate-300 text-center leading-tight">
+                <span className="text-xs font-bold text-white text-center leading-tight">
                   {link.platform}
                 </span>
               </motion.a>

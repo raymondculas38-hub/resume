@@ -3,32 +3,14 @@ import { FiBriefcase, FiCalendar, FiExternalLink, FiUser, FiLock } from 'react-i
 import SectionTitle from '../components/SectionTitle';
 import GlassCard from '../components/GlassCard';
 import { experienceData } from '../data/resumeData';
-import { ExperienceType } from '../types';
 
-const typeColors: Record<ExperienceType, string> = {
-  Professional: 'from-violet-600 to-purple-500',
-  Freelance:    'from-cyan-500 to-blue-500',
-  Internship:   'from-emerald-500 to-teal-400',
-  Personal:     'from-pink-500 to-rose-500',
-  Academic:     'from-amber-500 to-orange-500',
-  Education:    'from-sky-500 to-cyan-400',
-};
-
-const typeBadge: Record<ExperienceType, string> = {
-  Professional: 'bg-violet-600/10 text-violet-500 border-violet-500/20',
-  Freelance:    'bg-cyan-500/10 text-cyan-500 border-cyan-500/20',
-  Internship:   'bg-emerald-500/10 text-emerald-500 border-emerald-500/20',
-  Personal:     'bg-pink-500/10 text-pink-500 border-pink-500/20',
-  Academic:     'bg-amber-500/10 text-amber-500 border-amber-500/20',
-  Education:    'bg-sky-500/10 text-sky-500 border-sky-500/20',
-};
 
 export default function Experience() {
   return (
     <section id="projects" className="py-24 relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          label="Portfolio"
+          label="PROJECT"
           title="My Projects"
           subtitle="A timeline of my projects and academic work."
         />
@@ -44,21 +26,21 @@ export default function Experience() {
               className="relative"
             >
               {/* Dot */}
-              <div className={`absolute -left-12 top-6 w-9 h-9 rounded-full bg-gradient-to-br ${typeColors[exp.type]} flex items-center justify-center shadow-lg ring-4 ring-slate-50 dark:ring-slate-950`}>
+              <div className="absolute -left-12 top-6 w-9 h-9 rounded-full bg-black dark:bg-green-600 flex items-center justify-center shadow-lg ring-4 ring-white dark:ring-black">
                 <FiBriefcase size={14} className="text-white" />
               </div>
 
               <GlassCard className="p-6 sm:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                   <div>
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-white">{exp.position}</h3>
-                    <p className="text-violet-500 dark:text-violet-400 font-semibold text-sm">{exp.company}</p>
+                    <h3 className="text-xl font-extrabold text-white mb-1">{exp.position}</h3>
+                    <p className="text-white dark:text-green-400 font-bold text-sm">{exp.company}</p>
                   </div>
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${typeBadge[exp.type]}`}>
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-black text-white dark:bg-green-600 border border-white/20">
                       {exp.type}
                     </span>
-                    <span className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
+                    <span className="flex items-center gap-1.5 text-xs text-slate-100 dark:text-slate-300 font-medium">
                       <FiCalendar size={12} />
                       {exp.duration}
                     </span>
@@ -67,8 +49,8 @@ export default function Experience() {
 
                 <ul className="space-y-2 mb-5">
                   {exp.description.map((d, j) => (
-                    <li key={j} className="flex gap-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-violet-500 flex-shrink-0" />
+                    <li key={j} className="flex gap-3 text-sm text-slate-100 dark:text-slate-200 leading-relaxed font-medium">
+                      <span className="mt-1.5 w-2 h-2 rounded-full bg-white dark:bg-green-400 flex-shrink-0" />
                       {d}
                     </li>
                   ))}
@@ -78,7 +60,7 @@ export default function Experience() {
                   {exp.technologies.map(tech => (
                     <span
                       key={tech}
-                      className="px-2.5 py-1 rounded-lg text-xs font-semibold glass dark:bg-white/5 bg-slate-100 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-white/10"
+                      className="px-3 py-1 rounded-lg text-xs font-bold bg-white/20 dark:bg-white/10 text-white border border-white/30"
                     >
                       {tech}
                     </span>
@@ -87,8 +69,8 @@ export default function Experience() {
 
                 {/* Demo Links with Credentials */}
                 {exp.demoLinks && exp.demoLinks.length > 0 && (
-                  <div className="mt-5 p-4 rounded-xl bg-violet-500/5 dark:bg-violet-500/10 border border-violet-500/20">
-                    <p className="text-sm font-bold text-violet-400 mb-3 flex items-center gap-2">
+                  <div className="mt-5 p-4 rounded-xl bg-black/40 dark:bg-black/60 border border-white/20 dark:border-green-500/40">
+                    <p className="text-sm font-bold text-white dark:text-green-400 mb-3 flex items-center gap-2">
                       <FiLock size={13} /> Live Demo Access
                     </p>
                     <div className="grid sm:grid-cols-2 gap-3">
@@ -98,16 +80,16 @@ export default function Experience() {
                           href={link.loginUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block p-3 rounded-lg bg-white/60 dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-violet-500/50 hover:shadow-md hover:shadow-violet-500/10 transition-all duration-200 group"
+                          className="block p-3 rounded-lg bg-white/10 dark:bg-zinc-800 border border-white/20 dark:border-zinc-700 hover:border-green-400 hover:scale-[1.02] transition-all duration-200 group"
                         >
                           <div className="flex items-center gap-2 mb-2">
-                            <FiUser size={12} className="text-violet-400" />
-                            <span className="text-sm font-bold text-slate-700 dark:text-slate-200 group-hover:text-violet-400 transition-colors">
+                            <FiUser size={12} className="text-white dark:text-green-400" />
+                            <span className="text-sm font-bold text-white group-hover:text-green-300 transition-colors">
                               {link.role} Portal
                             </span>
-                            <FiExternalLink size={11} className="ml-auto text-slate-400 group-hover:text-violet-400 transition-colors" />
+                            <FiExternalLink size={11} className="ml-auto text-white/80 group-hover:text-green-300 transition-colors" />
                           </div>
-                          <div className="text-xs text-slate-500 dark:text-slate-400 font-mono space-y-0.5">
+                          <div className="text-xs text-slate-100 dark:text-slate-300 font-mono space-y-1">
                             <p>📧 {link.email}</p>
                             <p>🔑 {link.password}</p>
                           </div>

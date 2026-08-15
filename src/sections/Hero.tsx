@@ -67,21 +67,6 @@ export default function Hero({ theme }: HeroProps) {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background blobs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="animate-blob absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-violet-600/20 dark:bg-violet-600/10 blur-3xl" />
-        <div className="animate-blob animation-delay-2000 absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-cyan-500/20 dark:bg-cyan-500/10 blur-3xl" />
-        <div className="animate-blob animation-delay-4000 absolute bottom-1/4 left-1/2 w-72 h-72 rounded-full bg-pink-500/15 dark:bg-pink-500/10 blur-3xl" />
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
-          style={{
-            backgroundImage: 'linear-gradient(#8b5cf6 1px, transparent 1px), linear-gradient(to right, #8b5cf6 1px, transparent 1px)',
-            backgroundSize: '60px 60px'
-          }}
-        />
-      </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Left content */}
@@ -92,28 +77,27 @@ export default function Hero({ theme }: HeroProps) {
             className="flex-1 text-center lg:text-left"
           >
             <motion.div variants={item} className="flex items-center justify-center lg:justify-start gap-2 mb-4">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-sm font-medium text-emerald-500 dark:text-emerald-400">Available for opportunities</span>
+              <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse" />
+              <span className="text-sm font-semibold text-white dark:text-green-400">Available for opportunities</span>
             </motion.div>
 
-            <motion.p variants={item} className="text-violet-500 dark:text-violet-400 font-semibold text-sm sm:text-base tracking-widest uppercase mb-3">
+            <motion.p variants={item} className="text-slate-200 dark:text-slate-400 font-semibold text-sm sm:text-base tracking-widest uppercase mb-3">
               Hello, I'm
             </motion.p>
 
-            <motion.h1 variants={item} className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-slate-900 dark:text-white mb-4 leading-tight">
-              {personalInfo.fullName.split(' ')[0]}{' '}
-              <span className="text-gradient">{personalInfo.fullName.split(' ')[1]}</span>
+            <motion.h1 variants={item} className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-4 leading-tight">
+              {personalInfo.fullName}
             </motion.h1>
 
-            <motion.h2 variants={item} className="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-600 dark:text-slate-300 mb-6">
+            <motion.h2 variants={item} className="text-lg sm:text-xl lg:text-2xl font-semibold text-slate-100 dark:text-slate-300 mb-6">
               {personalInfo.title}
             </motion.h2>
 
-            <motion.p variants={item} className="text-slate-500 dark:text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
+            <motion.p variants={item} className="text-slate-100 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
               {personalInfo.bio}
             </motion.p>
 
-            <motion.div variants={item} className="flex items-center justify-center lg:justify-start gap-2 text-sm text-slate-500 dark:text-slate-400 mb-8">
+            <motion.div variants={item} className="flex items-center justify-center lg:justify-start gap-2 text-sm text-slate-200 dark:text-slate-400 mb-8">
               <FiMapPin size={14} />
               <span>{personalInfo.location}</span>
             </motion.div>
@@ -122,16 +106,18 @@ export default function Hero({ theme }: HeroProps) {
               <a
                 href={`mailto:${personalInfo.email}`}
                 id="hero-contact-btn"
-                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-semibold text-sm hover:shadow-lg hover:shadow-violet-500/30 hover:scale-105 transition-all duration-300"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white dark:bg-green-600 dark:text-white font-bold text-sm hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-md"
               >
                 <FiMail size={16} />
                 Contact Me
               </a>
               <a
-                href="#"
+                href="/assets/Raymond-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="Raymond-resume.pdf"
                 id="hero-download-btn"
-                onClick={e => { e.preventDefault(); window.print(); }}
-                className="no-print flex items-center gap-2 px-6 py-3 rounded-xl glass dark:bg-white/5 bg-slate-100 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 font-semibold text-sm hover:border-violet-500/50 hover:text-violet-500 hover:scale-105 transition-all duration-300"
+                className="no-print flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 dark:bg-white/5 border border-white/20 text-white font-semibold text-sm hover:bg-white/20 hover:scale-105 transition-all duration-300"
               >
                 <FiDownload size={16} />
                 Download CV
@@ -141,7 +127,7 @@ export default function Hero({ theme }: HeroProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="hero-github-btn"
-                className="w-11 h-11 rounded-xl glass dark:bg-white/5 bg-slate-100 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-violet-500 hover:border-violet-500/50 hover:scale-110 transition-all duration-300"
+                className="w-11 h-11 rounded-xl bg-white/10 dark:bg-white/5 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
               >
                 <FiGithub size={18} />
               </a>
@@ -150,7 +136,7 @@ export default function Hero({ theme }: HeroProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 id="hero-linkedin-btn"
-                className="w-11 h-11 rounded-xl glass dark:bg-white/5 bg-slate-100 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-blue-500 hover:border-blue-500/50 hover:scale-110 transition-all duration-300"
+                className="w-11 h-11 rounded-xl bg-white/10 dark:bg-white/5 border border-white/20 flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300"
               >
                 <FiLinkedin size={18} />
               </a>
@@ -164,11 +150,9 @@ export default function Hero({ theme }: HeroProps) {
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
             className="flex-shrink-0 relative"
           >
-            {/* Glow ring */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-violet-600 via-cyan-500 to-pink-500 blur-2xl opacity-30 scale-110" />
             {/* Ring border */}
-            <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full p-1 bg-gradient-to-br from-violet-600 via-cyan-500 to-pink-500 shadow-2xl">
-              <div className="w-full h-full rounded-full overflow-hidden bg-slate-200 dark:bg-slate-800 relative">
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full p-1 border-4 border-black dark:border-green-600 shadow-2xl">
+              <div className="w-full h-full rounded-full overflow-hidden bg-black relative">
                 {/* The Static Photo (Dark Mode / Initial State) */}
                 <img
                   src={personalInfo.avatar}
@@ -202,11 +186,11 @@ export default function Hero({ theme }: HeroProps) {
           transition={{ delay: 1.8 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 no-print"
         >
-          <span className="text-xs text-slate-400 dark:text-slate-600 tracking-widest uppercase">Scroll</span>
+          <span className="text-xs text-slate-200 dark:text-slate-400 tracking-widest uppercase">Scroll</span>
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-px h-8 bg-gradient-to-b from-violet-500 to-transparent"
+            className="w-px h-8 bg-white dark:bg-green-500"
           />
         </motion.div>
       </div>

@@ -33,19 +33,7 @@ const iconMap: Record<string, React.ReactNode> = {
   SiJupyter:          <SiJupyter size={32} />
 };
 
-const techColors: Record<string, string> = {
-  TypeScript:   'hover:text-blue-500 hover:border-blue-500/40',
-  JavaScript:   'hover:text-yellow-400 hover:border-yellow-500/40',
-  React:        'hover:text-cyan-400 hover:border-cyan-500/40',
-  PHP:          'hover:text-indigo-400 hover:border-indigo-500/40',
-  MySQL:        'hover:text-blue-400 hover:border-blue-500/40',
-  PostgreSQL:   'hover:text-sky-400 hover:border-sky-500/40',
-  Firebase:     'hover:text-amber-400 hover:border-amber-500/40',
-  Flutter:      'hover:text-cyan-400 hover:border-cyan-500/40',
-  Git:          'hover:text-orange-500 hover:border-orange-500/40',
-  GitHub:       'hover:text-slate-200 hover:border-slate-400/40',
-  Jupyter:      'hover:text-orange-600 hover:border-orange-500/40'
-};
+
 
 export default function TechStack() {
   const n = techStackGrid.length;
@@ -165,7 +153,7 @@ export default function TechStack() {
     <section id="techstack" ref={sectionRef} className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          label="Tools & Technologies"
+          label="TECH STACK"
           title="Tech Stack Showcase"
           subtitle="Every technology and tool I've mastered in my development journey."
         />
@@ -198,15 +186,15 @@ export default function TechStack() {
                   style={{ width: `${100 / visibleCount}%` }}
                 >
                   <div
-                    className={`glass dark:bg-white/5 bg-white border border-slate-200 dark:border-white/10 rounded-2xl p-6 flex flex-col items-center gap-3 transition-all duration-300 cursor-default select-none ${techColors[tech.name] || 'hover:text-violet-400 hover:border-violet-500/40 hover:shadow-lg hover:shadow-violet-500/10'}`}
+                    className="glass dark:bg-white/5 bg-white/10 border border-white/20 rounded-2xl p-6 flex flex-col items-center gap-3 transition-all duration-300 cursor-default select-none hover:border-white/50"
                   >
-                    <span className="text-slate-500 dark:text-slate-400 transition-colors duration-300">
+                    <span className="text-white transition-colors duration-300">
                       {iconMap[tech.iconName as IconKey] || <FaRocket size={32} />}
                     </span>
-                    <span className="text-sm font-bold text-slate-700 dark:text-slate-200 text-center leading-tight transition-colors duration-300">
+                    <span className="text-sm font-bold text-white text-center leading-tight transition-colors duration-300">
                       {tech.name}
                     </span>
-                    <span className="text-[11px] text-slate-400 dark:text-slate-500 text-center font-medium">{tech.category}</span>
+                    <span className="text-[11px] text-slate-200 dark:text-slate-400 text-center font-medium">{tech.category}</span>
                   </div>
                 </div>
               ))}
@@ -216,14 +204,14 @@ export default function TechStack() {
           {/* Navigation Arrows */}
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-violet-500 dark:hover:text-violet-400 hover:border-violet-500/40 hover:scale-110 transition-all duration-200 shadow-md md:opacity-0 md:group-hover:opacity-100"
+            className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass border border-white/20 flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-200 shadow-md md:opacity-0 md:group-hover:opacity-100"
             aria-label="Previous tech stack"
           >
             <FiChevronLeft size={20} />
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-violet-500 dark:hover:text-violet-400 hover:border-violet-500/40 hover:scale-110 transition-all duration-200 shadow-md md:opacity-0 md:group-hover:opacity-100"
+            className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass border border-white/20 flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-200 shadow-md md:opacity-0 md:group-hover:opacity-100"
             aria-label="Next tech stack"
           >
             <FiChevronRight size={20} />
@@ -238,8 +226,8 @@ export default function TechStack() {
               onClick={() => handleDotClick(index)}
               className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                 activeDotIndex === index 
-                  ? 'bg-gradient-to-r from-violet-600 to-cyan-500 w-6 shadow-md shadow-violet-500/20' 
-                  : 'bg-slate-300 dark:bg-slate-700 hover:bg-slate-400 dark:hover:bg-slate-600'
+                  ? 'bg-black dark:bg-green-500 w-6 shadow-md' 
+                  : 'bg-white/40 dark:bg-white/20 hover:bg-white/60'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
