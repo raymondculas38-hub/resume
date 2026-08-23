@@ -51,7 +51,7 @@ export default function About() {
                   { label: 'Email', value: personalInfo.email },
                   { label: 'Phone', value: personalInfo.phone },
                   { label: 'Location', value: personalInfo.location },
-                  { label: 'Experience', value: 'INFORMATION TECHNOLOGY STUDENT' },
+                  { label: 'Experience', value: personalInfo.experience },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex gap-4">
                     <dt className="text-sm font-semibold text-slate-200 dark:text-slate-400 w-24 flex-shrink-0">{label}</dt>

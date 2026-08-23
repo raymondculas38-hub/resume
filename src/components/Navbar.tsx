@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiSun, FiMoon, FiDownload, FiMenu, FiX } from 'react-icons/fi';
+import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 
 const navLinks = [
@@ -111,17 +111,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             </AnimatePresence>
           </button>
 
-          <a
-            href="/assets/Raymond-resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download="Raymond-resume.pdf"
-            id="download-resume-nav"
-            className="no-print hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-black text-white dark:bg-green-600 dark:text-white text-xs font-bold transition-all duration-200 hover:scale-105 shadow-md"
-          >
-            <FiDownload size={14} />
-            Resume
-          </a>
+
 
           {/* Mobile hamburger */}
           <button

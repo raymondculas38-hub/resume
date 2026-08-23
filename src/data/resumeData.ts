@@ -2,17 +2,17 @@ import { PersonalInfo, Skill, ExperienceItem, ProjectItem, EducationItem, Certif
 
 export const personalInfo: PersonalInfo = {
   fullName: "Raymond A. Culas",
-  title: "Information Technology Student & Aspiring Full-Stack Developer",
+  title: "Information Technology Student",
 
   avatar: "/assets/profile.jpg",
 
-  bio: "Information Technology student with a strong passion for web and mobile application development. Experienced in building academic projects, capstone systems, and personal applications using modern technologies such as TypeScript, React, Next.js, PHP,Dart,Python, MySQL,PosgreSQL,Firebase and Node.js. Continuously learning software engineering best practices, UI/UX design, and cloud technologies while developing real-world solutions.",
+  bio: "Information Technology student with a strong passion for web and mobile application development. Experienced in building academic projects, capstone systems, freelance work, and personal applications using modern technologies such as TypeScript, React, Next.js, PHP, Dart, Python, MySQL, PostgreSQL, Firebase, and Node.js. Continuously learning software engineering best practices, UI/UX design, and cloud technologies while developing real-world solutions.",
 
   objective: "To gain professional experience as a Full-Stack Developer by applying my technical skills, problem-solving abilities, and passion for software development. I aim to contribute to innovative projects, learn from experienced professionals, and continuously improve my expertise in modern web and mobile technologies.",
 
-  summary: "Dedicated Information Technology student with hands-on experience developing web-based systems, academic projects, and freelance applications. Skilled in frontend and backend development, database management, and responsive user interface design. Passionate about creating practical solutions that improve user experience while continuously expanding technical knowledge and industry-relevant skills.",
+  summary: "Dedicated Information Technology student with zero corporate experience but with hands-on experience in freelancing, academic projects, and personal applications. Skilled in frontend and backend development, database management, and responsive user interface design. Passionate about creating practical solutions that improve user experience while continuously expanding technical knowledge and industry-relevant skills.",
 
-  experienceYears: 6,
+  experience: "zero corporate experience but have hands-on experience in freelancing, academic projects, and personal applications",
   email: "raymondculas38@gmail.com",
   phone: "+639167711759",
   location: "Saguise Getafe, Bohol",
@@ -66,9 +66,10 @@ export const experienceData: ExperienceItem[] = [
 
   {
     id: "exp2",
-    position: "Capstone Project Developer",
+    position: "Capstone Project Development",
     company: "Academic Project",
     duration: "2025 - 2026",
+    image: "/assets/capstone_bg.jpg",
     description: [
       "Developed a GPS and Selfie-Based On-the-Job Training Monitoring System with overtime tracking and automated report generation.",
       "Implemented user authentication, attendance monitoring, messaging features, and report management modules.",
@@ -135,6 +136,34 @@ export const experienceData: ExperienceItem[] = [
     images: [
       "/assets/ml1.jpg",
       "/assets/ml2.jpg"
+    ]
+  },
+
+  {
+    id: "exp5",
+    position: "Walang Magawa sa Buhay",
+    company: "Personal Project",
+    duration: "2026",
+    description: [
+      "A personal portfolio landing page built for fun and creative expression.",
+      "Designed for desktop and laptop viewing."
+    ],
+    type: "Personal",
+    technologies: [
+      "TypeScript",
+      "React",
+      "Vite",
+      "HTML",
+      "Tailwind CSS"
+    ],
+    image: "/assets/walang_magawa.png",
+    demoLinks: [
+      {
+        role: "Live Site",
+        email: "No login required",
+        password: "N/A",
+        loginUrl: "https://culasportfolio.vercel.app/"
+      }
     ]
   }
 ];

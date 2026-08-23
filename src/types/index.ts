@@ -5,7 +5,7 @@ export interface PersonalInfo {
   bio: string;
   objective: string;
   summary: string;
-  experienceYears: number;
+  experience: string;
   email: string;
   phone: string;
   location: string;

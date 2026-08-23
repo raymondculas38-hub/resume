@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiDownload, FiMail, FiMapPin, FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FiMail, FiMapPin, FiGithub, FiLinkedin } from 'react-icons/fi';
 import { personalInfo, socialLinks } from '../data/resumeData';
 
 const container = {
@@ -111,17 +111,7 @@ export default function Hero({ theme }: HeroProps) {
                 <FiMail size={16} />
                 Contact Me
               </a>
-              <a
-                href="/assets/Raymond-resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                download="Raymond-resume.pdf"
-                id="hero-download-btn"
-                className="no-print flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 dark:bg-white/5 border border-white/20 text-white font-semibold text-sm hover:bg-white/20 hover:scale-105 transition-all duration-300"
-              >
-                <FiDownload size={16} />
-                Download CV
-              </a>
+
               <a
                 href={githubUrl}
                 target="_blank"

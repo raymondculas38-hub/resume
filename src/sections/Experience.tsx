@@ -30,7 +30,18 @@ export default function Experience() {
                 <FiBriefcase size={14} className="text-white" />
               </div>
 
-              <GlassCard className="p-6 sm:p-8">
+              <GlassCard className={`relative overflow-hidden ${exp.image ? 'p-0' : 'p-6 sm:p-8'}`}>
+                {/* Background image with overlay */}
+                {exp.image && (
+                  <>
+                    <div
+                      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                      style={{ backgroundImage: `url(${exp.image})` }}
+                    />
+                    <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
+                  </>
+                )}
+                <div className={`relative z-10 ${exp.image ? 'p-6 sm:p-8' : ''}`}>
                 <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                   <div>
                     <h3 className="text-xl font-extrabold text-white mb-1">{exp.position}</h3>
@@ -71,7 +82,11 @@ export default function Experience() {
                 {exp.demoLinks && exp.demoLinks.length > 0 && (
                   <div className="mt-5 p-4 rounded-xl bg-black/40 dark:bg-black/60 border border-white/20 dark:border-green-500/40">
                     <p className="text-sm font-bold text-white dark:text-green-400 mb-3 flex items-center gap-2">
-                      <FiLock size={13} /> Live Demo Access
+                      {exp.demoLinks.some(l => l.role === 'Live Site') ? (
+                        <><FiExternalLink size={13} /> Live Demo</>
+                      ) : (
+                        <><FiLock size={13} /> Live Demo Access</>
+                      )}
                     </p>
                     <div className="grid sm:grid-cols-2 gap-3">
                       {exp.demoLinks.map(link => (
@@ -83,16 +98,27 @@ export default function Experience() {
                           className="block p-3 rounded-lg bg-white/10 dark:bg-zinc-800 border border-white/20 dark:border-zinc-700 hover:border-green-400 hover:scale-[1.02] transition-all duration-200 group"
                         >
                           <div className="flex items-center gap-2 mb-2">
-                            <FiUser size={12} className="text-white dark:text-green-400" />
+                            {link.role === 'Live Site' ? (
+                              <FiExternalLink size={12} className="text-white dark:text-green-400" />
+                            ) : (
+                              <FiUser size={12} className="text-white dark:text-green-400" />
+                            )}
                             <span className="text-sm font-bold text-white group-hover:text-green-300 transition-colors">
-                              {link.role} Portal
+                              {link.role === 'Live Site' ? 'Visit Live Site' : `${link.role} Portal`}
                             </span>
                             <FiExternalLink size={11} className="ml-auto text-white/80 group-hover:text-green-300 transition-colors" />
                           </div>
-                          <div className="text-xs text-slate-100 dark:text-slate-300 font-mono space-y-1">
-                            <p>📧 {link.email}</p>
-                            <p>🔑 {link.password}</p>
-                          </div>
+                          {link.role !== 'Live Site' && (
+                            <div className="text-xs text-slate-100 dark:text-slate-300 font-mono space-y-1">
+                              <p>📧 {link.email}</p>
+                              <p>🔑 {link.password}</p>
+                            </div>
+                          )}
+                          {link.role === 'Live Site' && (
+                            <p className="text-xs text-slate-200 dark:text-slate-400 italic">
+                              ⚠️ Designed for desktop and laptop viewing
+                            </p>
+                          )}
                         </a>
                       ))}
                     </div>
@@ -125,6 +151,7 @@ export default function Experience() {
                     />
                   </div>
                 )}
+                </div>
               </GlassCard>
             </motion.div>
           ))}
