@@ -393,9 +393,9 @@ export const educationData: EducationItem[] = [
   year: "2026 - Present",
   achievements: [
     "Currently a 4th Year BSIT student.",
-    "Developed freelance and personal web application projects for clients and individual learning purposes.",
-    "Developed practical skills in programming, database management, and system analysis through coursework and personal projects.",
-    "Demonstrates strong teamwork, adaptability, and a commitment to continuous learning."
+    "Sto Niño Institute of Getafe Bohol Inc.,Junior Highschool Batch (2017-2020)",
+    "Sto Niño Institute of Getafe Bohol Inc.,Senior Highschool Batch (2021-2022)",
+    "Getafe,Central,Elementary School, Primary Batch (2010-2016)"
   ]
 }
 ];  
