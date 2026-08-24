@@ -1,6 +1,8 @@
 import { useTheme } from './hooks/useTheme';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
+import ClickRipple from './components/ClickRipple';
+import CursorGlow from './components/CursorGlow';
 import Footer from './components/Footer';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -25,6 +27,8 @@ export default function App() {
       </main>
       <Footer />
       <ScrollToTop />
+      <ClickRipple />
+      <CursorGlow />
     </div>
   );
 }
