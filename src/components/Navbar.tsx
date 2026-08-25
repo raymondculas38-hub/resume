@@ -42,12 +42,25 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    setMobileOpen(false);
     setActive(href);
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-      window.history.pushState(null, '', href);
+
+    // Close mobile menu first, then scroll after the exit animation settles
+    if (mobileOpen) {
+      setMobileOpen(false);
+      // Wait for the Framer Motion exit animation to complete before scrolling
+      setTimeout(() => {
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          window.history.pushState(null, '', href);
+        }
+      }, 350);
+    } else {
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+        window.history.pushState(null, '', href);
+      }
     }
   };
 

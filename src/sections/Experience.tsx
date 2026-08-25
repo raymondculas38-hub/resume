@@ -12,7 +12,7 @@ export default function Experience() {
         <SectionTitle
           label="PROJECT"
           title="My Projects"
-          subtitle="A timeline of my projects and academic work."
+          subtitle="All of these projects are my personal projects only. They do not include any freelance projects, as those projects are confidential."
         />
 
         <div className="timeline-line pl-12 space-y-8">
