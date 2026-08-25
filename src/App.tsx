@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
 import ClickRipple from './components/ClickRipple';
 import CursorGlow from './components/CursorGlow';
+import AudioPlayer from './components/AudioPlayer';
 import Footer from './components/Footer';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -29,6 +30,7 @@ export default function App() {
       <ScrollToTop />
       <ClickRipple />
       <CursorGlow />
+      <AudioPlayer />
     </div>
   );
 }
