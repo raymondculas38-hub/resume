@@ -3,13 +3,18 @@ export interface PersonalInfo {
   title: string;
   avatar: string;
   bio: string;
-  objective: string;
-  summary: string;
   experience: string;
   email: string;
   phone: string;
   location: string;
   resumeUrl: string;
+}
+
+export interface GalleryItem {
+  id: string;
+  type: 'image' | 'video';
+  url: string;
+  title?: string;
 }
 
 export type SkillCategoryType =

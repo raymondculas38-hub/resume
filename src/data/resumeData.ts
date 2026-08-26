@@ -1,4 +1,4 @@
-import { PersonalInfo, Skill, ExperienceItem, ProjectItem, EducationItem, CertificationItem, SocialLink, AchievementItem, TechStackItem } from '../types';
+import { PersonalInfo, Skill, ExperienceItem, ProjectItem, EducationItem, CertificationItem, SocialLink, AchievementItem, TechStackItem, GalleryItem } from '../types';
 
 export const personalInfo: PersonalInfo = {
   fullName: "Raymond A. Culas",
@@ -7,10 +7,6 @@ export const personalInfo: PersonalInfo = {
   avatar: "/assets/profile.jpg",
 
   bio: "Information Technology student with a strong passion for web and mobile application development. Experienced in building academic projects, capstone systems, freelance work, and personal applications using modern technologies such as TypeScript, React, Next.js, PHP, Dart, Python, MySQL, PostgreSQL, Firebase, and Node.js. Continuously learning software engineering best practices, UI/UX design, and cloud technologies while developing real-world solutions.",
-
-  objective: "To gain professional experience as a Full-Stack Developer by applying my technical skills, problem-solving abilities, and passion for software development. I aim to contribute to innovative projects, learn from experienced professionals, and continuously improve my expertise in modern web and mobile technologies.",
-
-  summary: "Dedicated Information Technology student with zero corporate experience but with hands-on experience in freelancing, academic projects, and personal applications. Skilled in frontend and backend development, database management, and responsive user interface design. Passionate about creating practical solutions that improve user experience while continuously expanding technical knowledge and industry-relevant skills.",
 
   experience: "zero corporate experience but have hands-on experience in freelancing, academic projects, and personal applications",
   email: "raymondculas38@gmail.com",
@@ -164,6 +160,30 @@ export const experienceData: ExperienceItem[] = [
         password: "N/A",
         loginUrl: "https://culasportfolio.vercel.app/"
       }
+    ]
+  },
+
+  {
+    id: "exp6",
+    position: "CVGM Enterprise POS System",
+    company: "Freelance Project",
+    duration: "2026",
+    images: [
+      "/assets/pos_system.jpg"
+    ],
+    description: [
+      "Developed a Progressive Web App (PWA) Point of Sale system with multi-branch management.",
+      "Features automated statement tracking, branch-specific inventory, and real-time SMS alerts via the Semaphore API."
+    ],
+    type: "Freelance",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Express.js",
+      "PWA",
+      "Semaphore SMS API",
+      "Tailwind CSS",
+      "PostgreSQL"
     ]
   }
 ];
@@ -382,6 +402,19 @@ export const projectsData: ProjectItem[] = [
     status: "Completed",
     date: "Dec 2024",
     image: "/assets/project_demo.png"
+  },
+  {
+    id: "p_adv_5",
+    name: "CVGM Enterprise POS with PWA",
+    description: "A Progressive Web App (PWA) Point of Sale system with multi-branch management. Features automated statement tracking, branch-specific inventory, and real-time SMS alerts via the Semaphore API.",
+    difficulty: "Advanced",
+    type: "Freelance",
+    technologies: ["React", "TypeScript", "Express.js", "PWA", "Semaphore SMS API", "Tailwind CSS", "PostgreSQL"],
+    github: "https://github.com/raymondculas38-hub/cvgm-pos",
+    demo: "#",
+    status: "Completed",
+    date: "Jul 2026",
+    image: "/assets/pos_system.jpg"
   }
 ];
 
@@ -488,4 +521,61 @@ export const techStackGrid: TechStackItem[] = [
   { name: "GitHub", category: "Version Control", iconName: "SiGithub" },
   { name: "Git", category: "Version Control", iconName: "SiGit" },
   { name: "Figma", category: "UI/UX Design", iconName: "SiFigma" }
+];
+
+export const galleryData: GalleryItem[] = [
+  {
+    id: "g1",
+    type: "video",
+    url: "/assets/ae190778-ebdd-42f4-8a29-3bb7ab13a000.mp4",
+    title: "Cinematic Reel"
+  },
+  {
+    id: "g2",
+    type: "image",
+    url: "/assets/1fda4a2e-3673-4df0-a5a0-7c6a2d5f1f19.jpg",
+    title: "Photography Capture"
+  },
+  {
+    id: "g3",
+    type: "image",
+    url: "/assets/25ee33c1-9f97-4edc-8ea1-565a11f06098.jpg",
+    title: "Vibrant View"
+  },
+  {
+    id: "g4",
+    type: "image",
+    url: "/assets/306e703f-e653-4dcf-ae25-3263fd7cbc72.jpg",
+    title: "Landscape Focus"
+  },
+  {
+    id: "g5",
+    type: "image",
+    url: "/assets/3adf930e-a2b7-42a6-aeb5-a471d0f26b8e.jpg",
+    title: "Daily Snap"
+  },
+  {
+    id: "g6",
+    type: "image",
+    url: "/assets/43d1e9f8-f0ee-4af7-8f87-7ceecdf02e6a.jpg",
+    title: "Scenic Shot"
+  },
+  {
+    id: "g7",
+    type: "image",
+    url: "/assets/6e9bab58-429d-4a08-9818-76e36cff11f3.jpg",
+    title: "Creative Concept"
+  },
+  {
+    id: "g8",
+    type: "image",
+    url: "/assets/93bf395a-2837-422d-807f-7301d564c7e7.jpg",
+    title: "Unique Viewport"
+  },
+  {
+    id: "g9",
+    type: "image",
+    url: "/assets/a871b9c3-6856-4ce5-9698-5173d691cd40.jpg",
+    title: "Final Frame"
+  }
 ];

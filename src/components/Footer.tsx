@@ -41,9 +41,6 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <p className="text-center text-xs text-slate-200 dark:text-slate-400 mt-6">
-          Built with React · TypeScript · Tailwind CSS · Framer Motion
-        </p>
       </div>
     </footer>
   );

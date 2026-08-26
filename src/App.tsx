@@ -6,7 +6,7 @@ import CursorGlow from './components/CursorGlow';
 import AudioPlayer from './components/AudioPlayer';
 import Footer from './components/Footer';
 import Hero from './sections/Hero';
-import About from './sections/About';
+import Gallery from './sections/Gallery';
 import TechStack from './sections/TechStack';
 import Experience from './sections/Experience';
 import Education from './sections/Education';
@@ -20,7 +20,7 @@ export default function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Hero theme={theme} />
-        <About />
+        <Gallery />
         <TechStack />
         <Experience />
         <Education />

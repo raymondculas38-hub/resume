@@ -155,7 +155,6 @@ export default function TechStack() {
         <SectionTitle
           label="TECH STACK"
           title="Tech Stack Showcase"
-          subtitle="Every technology and tool I've mastered in my development journey."
         />
 
         {/* Carousel Container */}

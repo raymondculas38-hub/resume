@@ -76,11 +76,6 @@ export default function Hero({ theme }: HeroProps) {
             animate="show"
             className="flex-1 text-center lg:text-left"
           >
-            <motion.div variants={item} className="flex items-center justify-center lg:justify-start gap-2 mb-4">
-              <span className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-sm font-semibold text-white dark:text-green-400">Available for opportunities</span>
-            </motion.div>
-
             <motion.p variants={item} className="text-slate-200 dark:text-slate-400 font-semibold text-sm sm:text-base tracking-widest uppercase mb-3">
               Hello, I'm
             </motion.p>

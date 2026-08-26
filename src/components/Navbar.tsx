@@ -3,7 +3,7 @@ import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 
 const navLinks = [
-  { label: 'ABOUT', href: '#about' },
+  { label: 'OUTSIDE IDE', href: '#outside-ide' },
   { label: 'TECH STACK', href: '#techstack' },
   { label: 'PROJECT', href: '#projects' },
   { label: 'EDUCATION', href: '#education' },
