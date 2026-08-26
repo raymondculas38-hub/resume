@@ -6,7 +6,7 @@ export const personalInfo: PersonalInfo = {
 
   avatar: "/assets/profile.jpg",
 
-  bio: "Information Technology student with a strong passion for web and mobile application development. Experienced in building academic projects, capstone systems, freelance work, and personal applications using modern technologies such as TypeScript, React, Next.js, PHP, Dart, Python, MySQL, PostgreSQL, Firebase, and Node.js. Continuously learning software engineering best practices, UI/UX design, and cloud technologies while developing real-world solutions.",
+  bio: "I’m an Information Technology student passionate about web and mobile application development, with experience building academic, freelance, and personal projects using modern technologies.",
 
   experience: "zero corporate experience but have hands-on experience in freelancing, academic projects, and personal applications",
   email: "raymondculas38@gmail.com",
