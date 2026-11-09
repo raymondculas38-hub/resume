@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiBriefcase, FiCalendar, FiExternalLink, FiUser, FiLock } from 'react-icons/fi';
+import { FiBriefcase, FiCalendar, FiExternalLink, FiUser, FiLock, FiGithub } from 'react-icons/fi';
 import SectionTitle from '../components/SectionTitle';
 import GlassCard from '../components/GlassCard';
 import { experienceData } from '../data/resumeData';
@@ -77,6 +77,22 @@ export default function Experience() {
                     </span>
                   ))}
                 </div>
+
+                {/* GitHub Link */}
+                {exp.github && (
+                  <div className="mt-4">
+                    <a
+                      href={exp.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 dark:bg-zinc-800 border border-white/20 dark:border-zinc-700 hover:border-green-400 hover:scale-[1.02] transition-all duration-200 group text-sm font-bold text-white"
+                    >
+                      <FiGithub size={16} className="text-white dark:text-green-400 group-hover:text-green-300" />
+                      <span className="group-hover:text-green-300 transition-colors">View on GitHub</span>
+                      <FiExternalLink size={12} className="ml-auto text-white/70 group-hover:text-green-300 transition-colors" />
+                    </a>
+                  </div>
+                )}
 
                 {/* Demo Links with Credentials */}
                 {exp.demoLinks && exp.demoLinks.length > 0 && (

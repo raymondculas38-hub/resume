@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import {
   SiPython, SiPhp, SiTypescript, SiJavascript,
   SiHtml5, SiTailwindcss, SiDart, SiFlutter,
-  SiMysql, SiPostgresql, SiFirebase, SiGithub, SiGit, SiFigma, SiJupyter
+  SiMysql, SiPostgresql, SiFirebase, SiGithub, SiGit, SiFigma, SiJupyter, SiLaravel
 } from 'react-icons/si';
 import { FaJava, FaRocket } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
@@ -30,7 +30,8 @@ const iconMap: Record<string, React.ReactNode> = {
   SiGithub:           <SiGithub size={32} />,
   SiGit:              <SiGit size={32} />,
   SiFigma:            <SiFigma size={32} />,
-  SiJupyter:          <SiJupyter size={32} />
+  SiJupyter:          <SiJupyter size={32} />,
+  SiLaravel:          <SiLaravel size={32} />
 };
 
 

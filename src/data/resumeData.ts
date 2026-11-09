@@ -165,25 +165,29 @@ export const experienceData: ExperienceItem[] = [
 
   {
     id: "exp6",
-    position: "CVGM Enterprise POS System",
-    company: "Freelance Project",
+    position: "E-Commerce Furniture Web App",
+    company: "Personal Project",
     duration: "2026",
-    images: [
-      "/assets/pos_system.jpg"
-    ],
     description: [
-      "Developed a Progressive Web App (PWA) Point of Sale system with multi-branch management.",
-      "Features automated statement tracking, branch-specific inventory, and real-time SMS alerts via the Semaphore API."
+      "Built a full-featured e-commerce furniture store using PHP and Laravel framework.",
+      "Implemented product listing, shopping cart, order management, and admin dashboard.",
+      "Used MySQL as the database for managing products, users, and orders.",
+      "Designed a clean and responsive UI for browsing and purchasing furniture items."
     ],
-    type: "Freelance",
+    type: "Personal",
     technologies: [
-      "React",
-      "TypeScript",
-      "Express.js",
-      "PWA",
-      "Semaphore SMS API",
-      "Tailwind CSS",
-      "PostgreSQL"
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    github: "https://github.com/raymondculas38-hub/CulasFurniture.git",
+    images: [
+      "/assets/furnit1.png",
+      "/assets/furnit2.png",
+      "/assets/furnit3.png"
     ]
   }
 ];
@@ -272,16 +276,16 @@ export const projectsData: ProjectItem[] = [
   // Intermediate Projects
   {
     id: "p_int_1",
-    name: "Vibrant E-Commerce Webstore",
-    description: "Full e-commerce showcase application with dynamic product catalogs, search queries, filter toggles, product cart management, and mock Stripe checkouts.",
+    name: "E-Commerce Furniture Store (CulasFurniture)",
+    description: "A full-featured e-commerce furniture web application built with PHP and Laravel. Features product catalog, shopping cart, order management, and an admin dashboard — powered by MySQL.",
     difficulty: "Intermediate",
-    type: "Freelance",
-    technologies: ["React", "Tailwind CSS", "Context API", "Stripe SDK"],
-    github: "https://github.com/dev/vibrant-cart",
+    type: "Personal Projects",
+    technologies: ["PHP", "Laravel", "MySQL", "HTML", "CSS", "JavaScript"],
+    github: "https://github.com/raymondculas38-hub/CulasFurniture.git",
     demo: "#",
     status: "Completed",
-    date: "Jun 2022",
-    image: "/assets/project_demo.png"
+    date: "2026",
+    image: "/assets/furnit1.png"
   },
   {
     id: "p_int_2",
@@ -402,19 +406,6 @@ export const projectsData: ProjectItem[] = [
     status: "Completed",
     date: "Dec 2024",
     image: "/assets/project_demo.png"
-  },
-  {
-    id: "p_adv_5",
-    name: "CVGM Enterprise POS with PWA",
-    description: "A Progressive Web App (PWA) Point of Sale system with multi-branch management. Features automated statement tracking, branch-specific inventory, and real-time SMS alerts via the Semaphore API.",
-    difficulty: "Advanced",
-    type: "Freelance",
-    technologies: ["React", "TypeScript", "Express.js", "PWA", "Semaphore SMS API", "Tailwind CSS", "PostgreSQL"],
-    github: "https://github.com/raymondculas38-hub/cvgm-pos",
-    demo: "#",
-    status: "Completed",
-    date: "Jul 2026",
-    image: "/assets/pos_system.jpg"
   }
 ];
 
@@ -509,6 +500,7 @@ export const techStackGrid: TechStackItem[] = [
   { name: "Python", category: "Languages", iconName: "SiPython" },
   { name: "Jupyter", category: "Tools", iconName: "SiJupyter" },
   { name: "PHP", category: "Languages", iconName: "SiPhp" },
+  { name: "Laravel", category: "Backend Frameworks", iconName: "SiLaravel" },
   { name: "TypeScript", category: "Languages", iconName: "SiTypescript" },
   { name: "JavaScript", category: "Languages", iconName: "SiJavascript" },
   { name: "HTML", category: "Frontend", iconName: "SiHtml5" },

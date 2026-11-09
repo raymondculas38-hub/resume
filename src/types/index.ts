@@ -47,6 +47,7 @@ export interface ExperienceItem {
   image?: string;
   images?: string[];
   video?: string;
+  github?: string;
 }
 
 export type ProjectDifficulty = 'Beginner' | 'Intermediate' | 'Advanced';
